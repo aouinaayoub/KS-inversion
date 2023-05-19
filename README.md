@@ -6,14 +6,14 @@ This repository contains the implementation of the Kohn-Sham inversion algorithm
 
 The inverted exchange-correlation potentials obtained from the Quantum Monte Carlo (QMC) densities are provided in the following files:
 
-- `si_qmc_dens_vxc.csv`: Inverted exchange-correlation potentials for silicon.
-- `nacl_qmc_dens_vxc.csv`: Inverted exchange-correlation potentials for NaCl.
+- `si_qmc_dens_vxc.csv`
+- `nacl_qmc_dens_vxc.csv`
 
 The potentials are expressed in atomic units.
 
 ## Silicon
 
-For silicon, we considered the primitive cell, which is a Face Centered Cubic (FCC) cell containing two Si atoms located at coordinates (0, 0, 0) and (1/4, 1/4, 1/4). The volume of the primitive cell is one quarter of the conventional cubic one, with a lattice constant of 10.263 Bohr. In constructing the Kohn-Sham potential, we used a [Ne-core pseudopotential](https://github.com/aouinaayoub/KS-inversion/blob/main/pseudo-potentials/si.upf) and a plane wave cutoff of 25 Ry. Additionally, a 6 × 6 × 6 k-point grid was employed.
+For silicon, we considered the primitive cell, which is a Face Centered Cubic (FCC) cell containing two Si atoms located at coordinates (0, 0, 0) and (1/4, 1/4, 1/4). The volume of the primitive cell is one quarter of the conventional cubic one, with a lattice constant of 10.263087 Bohr. In constructing the Kohn-Sham potential, we used a [Ne-core pseudopotential](https://github.com/aouinaayoub/KS-inversion/blob/main/pseudo-potentials/si.upf) and a plane wave cutoff of 25 Ry. Additionally, a 6 × 6 × 6 k-point grid was employed.
 
 ## NaCl
 

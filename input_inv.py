@@ -4,17 +4,16 @@ import os
 #-------------------------------------------------------------------------------------------------------------------------#
 
 # choose output file name   
-output_filename="pbe_ml_factor"
+output_filename="invlda"
 
-# intial guess for  density
-densR= np.genfromtxt("dens_ref_lda.dat") 
+# The reference density
+densR_ref= np.genfromtxt("dens_ref_lda.dat") 
 
-# choice of the xc functional 
-# ixc='LDA'
-potxcR=np.load("/media/ayoub/SSD/alawa/Documents/ML-lda/local/QMC/reports/vxc_ml_factor_pbe_si.npy")
+# intial guess for the xc pot  
+potxcR= 0.3* (-(3./np.pi)**(1./3.)*densR_ref**(1./3.)) -0.2 # start with 0.3 vlda_x 
 
 # continue from last run 
-continue_from_last_run=0 
+continue_from_last_run=1 
 last_run="invlda.npz" 
 
 #-------------------------------------------------------------------------------------------------------------------------#
@@ -44,7 +43,7 @@ V_extR =np.genfromtxt("VPS_loc.dat")
 n_rgrid1,n_rgrid2,n_rgrid3 = [round(len(V_extR)**(1/3))]*3
 
 # nonlocal potenial 
-origin_dir= "/media/ayoub/SSD/lenovo/Documents/github-invxc/direct-code/lda/"
+origin_dir= "."
 path_vnl=origin_dir+'vnl.dat'
 
 # construct or load matrix 
@@ -55,3 +54,6 @@ if not os.path.exists(matrix_dir):
   flagmatrix=1
 ## create a matrix for each n_pkgmat 
 n_pkgmat=1
+
+# damping parameter 
+alpha=5e-5
