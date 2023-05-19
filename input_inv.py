@@ -13,7 +13,7 @@ densR_ref= np.genfromtxt("dens_ref_lda.dat")
 potxcR= 0.3* (-(3./np.pi)**(1./3.)*densR_ref**(1./3.)) -0.2 # start with 0.3 vlda_x 
 
 # continue from last run 
-continue_from_last_run=1 
+continue_from_last_run=0 
 last_run="invlda.npz" 
 
 #-------------------------------------------------------------------------------------------------------------------------#
