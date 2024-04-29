@@ -21,15 +21,15 @@ For NaCl, we used the primitive cell containing one Na atom at lattice points an
 
 ## Code
 
-The inversion code is derived from the [PyKSolver](https://github.com/aouinaayoub/PyKSolver) code, which is used to solve the Kohn-Sham equations. A small modification was made to the PyKSolver code to implement the inversion algorithm.
+The inversion algorithm is implemented as an *xc functional class*  in the [PyKSolver](https://github.com/aouinaayoub/PyKSolver) code, which is used to solve the Kohn-Sham equations. 
 
 To run the code for silicon:
 
 1. Download the non-local part of the pseudo-potential of silicon from [here](https://zenodo.org/record/7661254/files/vnl.tar.gz?download=1) and place it in the same directory.
-2. Execute the `pyksinvert.py` file:
+2. Execute the `pyksolver.py` file:
    
    ```bash 
-   python pyksinvert.py
+   python pyksolver.py
    ```
 
 Note: Make sure you have the necessary dependencies and libraries installed before running the code.
